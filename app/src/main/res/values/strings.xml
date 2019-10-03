@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BookManager_QuannvPH07250</string>
+    <string name="user">Người dùng</string>
+    <string name="book">Sách</string>
+    <string name="book_top">Sách bán chạy</string>
+    <string name="book_species">Thể loại</string>
+    <string name="invoice">Hóa đơn</string>
+    <string name="statistic">Thống kê</string>
+
+    <string-array name="theLoai_arrays">
+        <item>Công nghệ thông tin</item>
+        <item>Tiếng Anh</item>
+        <item>Marketing</item>
+        <item>Du lịch</item>
+        <item>Đồ họa</item>
+    </string-array>
+</resources>
