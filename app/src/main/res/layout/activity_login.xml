@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="openNew"
+        android:onClick="checkLogin"
         android:text="Đăng nhập"
         app:layout_constraintEnd_toEndOf="@+id/btnCancel"
         app:layout_constraintHorizontal_bias="0.042"

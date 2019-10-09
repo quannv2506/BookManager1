@@ -48,23 +48,8 @@ public class NguoiDungDAO {
             nguoiDungList.add(nd);
             cursor.moveToNext();
         }
-        cursor.close();
+        dbManager.close();
         return nguoiDungList;
-    }
-
-    public int updateUser(NguoiDung nd){
-        ContentValues values = new ContentValues();
-        values.put("username", nd.getUsername());
-        values.put("password", nd.getPassword());
-        values.put("phone", nd.getPhone());
-        values.put("hoten", nd.getPhone());
-
-        int result = sqLiteDatabase.update(TABLE_NAME, values, "username=?", new String[]{nd.getUsername()});
-        if (result == 0){
-            return -1;
-        }
-        return 1;
-
     }
 
     public int updateUser(String username, String phone, String fullName){

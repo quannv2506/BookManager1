@@ -3,6 +3,7 @@ package vn.devpro.bookmanager_quannvph07250.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void openNew(View view) {
+    public void checkLogin(View view) {
         nguoiDungDAO = new NguoiDungDAO(this);
         String username = edUser.getText().toString();
         String password = edPass.getText().toString();
@@ -43,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (result){
             Toast.makeText(getBaseContext(), "Login thành công", Toast.LENGTH_SHORT).show();
+            rememberUser(username, password, chkRemember.isChecked());
             startActivity(new Intent(getBaseContext(), TrangChuActivity.class));
         } else {
             Toast.makeText(getBaseContext(), "Login không thành công", Toast.LENGTH_SHORT).show();
@@ -54,5 +56,18 @@ public class LoginActivity extends AppCompatActivity {
         edPass.setText("");
     }
 
-//    public void rememberU
+    public void rememberUser(String user, String pass, boolean status){
+        SharedPreferences pref = getSharedPreferences("USER_FILE",MODE_PRIVATE);
+        SharedPreferences.Editor edit = pref.edit();
+        if (!status){
+            edit.clear();
+        }else {
+            //luu du lieu
+            edit.putString("USERNAME",user);
+            edit.putString("PASSWORD",pass);
+            edit.putBoolean("REMEMBER",status);
+        }
+        //luu lai toan bo
+        edit.commit();
+    }
 }

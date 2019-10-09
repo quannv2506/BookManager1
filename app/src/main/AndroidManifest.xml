@@ -9,24 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.UpdateNguoiDungActivity"></activity>
+        <activity android:name=".activity.ListSachActivity"></activity>
+        <activity android:name=".activity.UpdateTheLoaiActivity" />
+        <activity android:name=".activity.ListTheLoaiActivity" />
+        <activity android:name=".activity.UpdateNguoiDungActivity" />
         <activity android:name=".activity.ChangePasssActivity" />
         <activity android:name=".activity.ThemHDActivity" />
         <activity android:name=".activity.HDCTActivity" />
         <activity android:name=".activity.HoaDonActivity" />
         <activity android:name=".activity.ListNguoiDungActivity" />
-        <activity android:name=".activity.NguoiDungActivity">
+        <activity android:name=".activity.NguoiDungActivity" />
+        <activity android:name=".activity.SachActivity" />
+        <activity android:name=".activity.TheLoaiActivity"></activity>
+        <activity android:name=".activity.TrangChuActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SachActivity" />
-        <activity android:name=".activity.TheLoaiActivity" />
-        <activity android:name=".activity.TrangChuActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.MainActivity"></activity>
     </application>
 
 </manifest>

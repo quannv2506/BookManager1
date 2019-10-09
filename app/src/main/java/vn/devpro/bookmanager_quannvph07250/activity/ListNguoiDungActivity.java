@@ -41,13 +41,6 @@ public class ListNguoiDungActivity extends AppCompatActivity {
         nguoiDungAdapter = new NguoiDungAdapter(nguoiDungList, ListNguoiDungActivity.this);
         lvUser.setAdapter(nguoiDungAdapter);
 
-//        lvUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//            }
-//        });
-
         lvUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -60,7 +53,6 @@ public class ListNguoiDungActivity extends AppCompatActivity {
                 bundle.putString("fullName_key", nguoiDungList.get(position).getFullName());
                 intent.putExtra("bundle", bundle);
                 startActivity(intent);
-
             }
         });
     }

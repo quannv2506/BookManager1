@@ -35,7 +35,7 @@ public class UpdateNguoiDungActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
         if (bundle != null) {
-            edtUpUser.setText(bundle.getString("username_key"));
+            edtUpUser.setText(bundle.getString("tenLoai_key"));
             edtUpPass.setText(bundle.getString("password_key"));
             edtUpPhone.setText(bundle.getString("phone_key"));
             edtUpName.setText(bundle.getString("fullName_key"));
@@ -64,11 +64,6 @@ public class UpdateNguoiDungActivity extends AppCompatActivity {
                 String fullName = edtUpName.getText().toString();
 
                 nguoiDungDAO = new NguoiDungDAO(UpdateNguoiDungActivity.this);
-                NguoiDung nd = new NguoiDung(user, pass, phone, fullName);
-//                nd.username = user;
-//                nd.password = pass;
-//                nd.phone = phone;
-//                nd.fullName = fullName;
                 long result = nguoiDungDAO.updateUser(user, phone, fullName);
                 if (result > 0) {
                     Toast.makeText(UpdateNguoiDungActivity.this, "Update thành công", Toast.LENGTH_SHORT).show();

@@ -13,18 +13,20 @@ import android.widget.Spinner;
 
 import vn.devpro.bookmanager_quannvph07250.R;
 
-public class SachActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class SachActivity extends AppCompatActivity {
 
-    String[] subject = {"Công nghệ thông tin", "Đồ họa", "Marketing", "Du lịch"};
+
     ImageView imgAddTheLoail;
-    Spinner spnSpecies;
+    Spinner spnLoaiSach;
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sach);
 
         imgAddTheLoail = findViewById(R.id.imgAddTheLoai);
-        spnSpecies = findViewById(R.id.spnSpecies);
+        spnLoaiSach = findViewById(R.id.spnSpecies);
 
         imgAddTheLoail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,14 +35,9 @@ public class SachActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-//        spnSpecies.setOnItemClickListener(this);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, subject);
-        spnSpecies.setAdapter(arrayAdapter);
+
+
 
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-    }
 }

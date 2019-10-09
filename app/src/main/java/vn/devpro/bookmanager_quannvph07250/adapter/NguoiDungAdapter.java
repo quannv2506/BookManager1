@@ -46,6 +46,7 @@ public class NguoiDungAdapter extends BaseAdapter {
 
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         view = inflater.inflate(R.layout.item_nguoidung_list, viewGroup, false);
+
         TextView tvName = view.findViewById(R.id.tvName);
         TextView tvPhone = view.findViewById(R.id.tvPhone);
         ImageView imgUser = view.findViewById(R.id.imgUser);

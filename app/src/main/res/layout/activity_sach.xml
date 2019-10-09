@@ -146,14 +146,14 @@
         app:layout_constraintTop_toBottomOf="@+id/edtAmount">
 
         <Button
-            android:id="@+id/btnAddSpecies"
+            android:id="@+id/btnThemTheLoai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Thêm" />
 
         <Button
-            android:id="@+id/btnCancelSpecies"
+            android:id="@+id/btnHuyTheLoai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -161,7 +161,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnShowSpecies"
+        android:id="@+id/btnShowTheLoai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
